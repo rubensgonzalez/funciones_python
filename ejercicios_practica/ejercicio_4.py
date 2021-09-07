@@ -13,6 +13,14 @@ import random
 # --------------------------------
 # Aquí dentro definir la función lista_aleatoria
 
+def lista_aleatoria(inicio, fin, cantidad):
+   mi_lista_aleatoria= []
+   i=0
+   while i != cantidad:
+    i+=1  
+    numero = random.randrange(inicio, fin+1)
+    mi_lista_aleatoria.append(numero)
+   return mi_lista_aleatoria
 
 # --------------------------------
 
@@ -23,6 +31,7 @@ if __name__ == '__main__':
     inicio = 0
     fin = 10
     cantidad = 5
+    
 
     # Alumno: Crear la función "lista_aleatoria"
 
@@ -30,7 +39,7 @@ if __name__ == '__main__':
     # Ejemplo de como obtener un numero aleatorio
     # entre inicio y fin
     # inicio <= numero <= fin
-    numero = random.randrange(inicio, fin+1)
+    # numero = random.randrange(inicio, fin+1)
     # Documentación oficial de random
     # https://docs.python.org/3.7/library/random.html
     # Ante cualquier duda preguntar en el campus!
@@ -41,7 +50,6 @@ if __name__ == '__main__':
     # contenga la lista, es decir, la cantidad de elementos random a generar.
 
     # def lista_aleatoria (inicio, fin, cantidad)
-
     # Para ello dentro de la función deberá realizar un bucle que repita "cantidad"
     # veces esta operacion:
     # numero = random.randrange(inicio, fin+1)
@@ -53,12 +61,13 @@ if __name__ == '__main__':
     # Finalmente dicha función debe retornar la lista de elementos random generados.
 
     # Luego de crear la función invocarla en este lugar:
+    mi_lista_aleatoria = lista_aleatoria(inicio, fin, cantidad)
 
     # mi_lista_aleatoria = lista_aleatoria(inicio, fin, cantidad)
 
     # Imprimir en pantalla "mi_lista_aleatoria" que tendrá
     # los valores retornado por la función lista_aleatoria:
-
+    print("lista aleatoria: {}".format(mi_lista_aleatoria))
     # print(mi_lista_aleatoria)
 
     print("terminamos")
